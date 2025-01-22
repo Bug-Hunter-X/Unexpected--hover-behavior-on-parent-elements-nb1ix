@@ -1,0 +1,17 @@
+To fix this issue, use more specific selectors.  Instead of applying `:hover` to the parent, apply it directly to the child element you intend to style upon hovering.
+
+```css
+.parent .child:hover {
+  color: red;
+}
+
+.parent {
+  background-color: lightgray;
+}
+
+.child {
+  color: blue;
+}
+```
+
+Now, only when the mouse hovers directly over a child element (.child) will its color change to red. The parent background color remains unchanged unless the mouse is over the parent element itself. This provides more control and prevents unintended styling of child elements.
