@@ -1,0 +1,13 @@
+The following CSS code snippet demonstrates a common error: it uses the `:hover` pseudo-class incorrectly on a parent element, thereby affecting child elements unexpectedly.
+
+```css
+.parent:hover {
+  background-color: yellow;
+}
+
+.child {
+  color: blue;
+}
+```
+
+In this example, when the mouse hovers over the `.parent` element, the background color turns yellow. This is expected behavior. However, the `:hover` pseudo-class isn't specific enough and it unintentionally changes the background color for child elements too.
